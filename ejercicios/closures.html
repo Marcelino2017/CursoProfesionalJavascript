@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <a href="/ejercicios/">Go Back</a>
+    <p><em>Abre la consola</em></p>
+    <p>
+        <h3>Closures</h3>
+        
+        Son funciones que regresan una función o un objeto con funciones que mantienen las variables que fueron declaradas fuera de su scope.
+        <br>
+        <br>
+        Los closures nos sirven para tener algo parecido a variables privadas, característica que no tiene JavaScript por default. Es decir encapsulan variables que no pueden ser modificadas directamente por otros objetos, sólo por funciones pertenecientes al mismo.
+    </p>
+
+    <script>
+        //CLosures
+        //printColor
+
+        //IIF [esta funcion se llama o invoca automaticamente]
+        /* (function () {
+            let color = 'gree';
+
+            function pritnColor(params) {
+                console.log(color);
+            }
+
+            pritnColor();
+        })(); */
+
+        //funciones que regresan funciones
+        /* function makeColorPrinter(color) {
+            let colorMessege = `The color is ${color}`;
+            return function () {
+                console.log(color);
+            }
+        }
+
+        let greenColorPrinter = makeColorPrinter('green');
+        console.log(greenColorPrinter()); */
+
+        //varaibles "privadas"
+        /* const counter = {
+            count: 3
+        } */
+        
+        function makeCounter(n) {
+            //varaibles "privadas"
+            let count = n;
+            return {
+                incresae: function () { 
+                    return count + 1;
+                 },
+                decrease: function () { 
+                    return count - 1;
+                 },
+                getCount: function () {
+                    return count;
+                 },
+            }
+        }
+        let counter = makeCounter(7);
+        console.log('The count is: ', counter.getCount ());
+        counter.incresae();
+        console.log('The count is: ', counter.getCount ());
+        counter.decrease();
+        counter.decrease();
+        counter.decrease();
+        counter.decrease();
+
+        counter.count = 0;
+        console.log('The count is: ', counter.getCount());
+    </script>
+</body>
+</html>
