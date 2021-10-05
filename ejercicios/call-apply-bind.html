@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <ul>
+      <li><button class="call-to-action">Aprender</button></li>
+      <li><button class="call-to-action">Aprender Más</button></li>
+      <li><button class="call-to-action">¡Nunca parar de Aprender!</button></li>
+    </ul>
+
+    <script>
+      // Establece `this` usando `call`
+      function saludar(params) {
+          console.log(`Hola soy ${this.name} ${this.apellido} `);
+      }
+
+      const richartd  =  {
+          name: "richard",
+          apellido: "Kaufam López"
+      }
+
+      saludar.call(richartd);
+      // Establece `this` usando `call` y pasar argumentos a la función
+      function caminar(metro, direccion) {
+          console.log(`${this.name} camina ${metro} metros hacia el ${direccion}`);
+      }
+
+      caminar.call(richartd, 400, 'Norte');
+      // Establece `this` usando `apply` y pasar argumentos a la función
+      const valores = [800, "Noreste"];
+      caminar.apply(richartd, valores);
+      /*
+        Call - coma
+        Apply - arreglo
+      */
+      // Establecer `this` en una nueva función usando `bind`
+      const daniel = {name: 'Daniel', apellido: 'Sanchez'};
+      const danieSaludar = saludar.bind(daniel);
+      danieSaludar();
+
+      const danielCamina = caminar.bind(daniel, 2000);
+      danielCamina('Oeste')
+      // Cuándo es útil usar uno de estos métodos
+      const buttons = document.getElementsByClassName("call-to-action");
+      /* buttons.forEach(button => {
+          button.onclik = () => alert('Nunca pares de aprender!');
+      }); */
+
+      Array.prototype.forEach.call(buttons, button => {
+          button.onclick = () => alert('Nunca pares de aprender!');
+      });
+    </script>
+</body>
+</html>
