@@ -37,3 +37,47 @@ Los navegadores no entienden TypeScript así que lo vamos a transpilar a JavaScr
 
 # Interfaces
 Nos permiten declarar la forma exacta de un objeto, definiendo los tipos de sus propiedades y si son opcionales o no.
+
+# Qué es un patrón de diseño
+Son soluciones generales ya probadas dentro de un contexto que las limita a problemas frecuentes que nos encontramos en el desarrollo de software.
+
+# Categoria de  patrones de diseño
+- Creacionales. Proveen diferentes mecanismos para crear objetos.
+- Estructurales. Describen formas de componer objetos para formar nuevas estructuras flexibles y eficientes.
+- De Comportamiento. Gestionan algoritmos y responsabilidades entre objetos.
+
+➡️Creacionales
+Proveen diferentes mecanismos para crear objetos.
+
+Abstract Factory
+Builder
+Factory Method
+Prototype
+Singleton
+ 
+➡️Estructurales
+Describen formas de componer objetos para formar nuevas estructuras flexibles y eficientes.
+Adapter
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
+ 
+➡️Comportamiento
+Gestionan algoritmos y responsabilidades entre objetos.
+Chain of Responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Template Method
+Visitor
+
+# Patrón Singleton y Casos de Uso 
+Es un patrón que te asegura que una clase solo tiene una instancia. Esta única instancia puede ser consumida por cualquier otro objeto.
