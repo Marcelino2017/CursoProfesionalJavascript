@@ -56,7 +56,7 @@ Builder
 Factory Method
 Prototype
 Singleton
- 
+
 ➡️Estructurales
 Describen formas de componer objetos para formar nuevas estructuras flexibles y eficientes.
 Adapter
@@ -66,7 +66,7 @@ Decorator
 Facade
 Flyweight
 Proxy
- 
+
 ➡️Comportamiento
 Gestionan algoritmos y responsabilidades entre objetos.
 Chain of Responsibility
@@ -81,7 +81,7 @@ Strategy
 Template Method
 Visitor
 
-# Patrón Singleton y Casos de Uso 
+# Patrón Singleton y Casos de Uso
 Es un patrón que te asegura que una clase solo tiene una instancia. Esta única instancia puede ser consumida por cualquier otro objeto.
 
 # ¿Cómo funciona el Patrón Observer?
