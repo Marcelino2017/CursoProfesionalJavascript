@@ -1,7 +1,7 @@
 # CursoProfesionalJavascript
 Curso Profesinal de Javascript
 
-#This
+# This
 this se refiere a un objeto, ese objeto es el que actualmente está ejecutando un pedazo de código.
 
 No se puede asignar un valor a this directamente y este depende de en que scope nos encontramos:
@@ -10,7 +10,7 @@ Cuando llamamos a this en el Global Scope o Function Scope, se hace referencia a
 Cuando llamamos a this desde una función que está contenida en un objeto, this se hace referencia a ese objeto.
 Cuando llamamos a this desde una “clase”, se hace referencia a la instancia generada por el constructor.
 
-#EVENT LOOP
+# EVENT LOOP
 El Event Loop hace que Javascript parezca ser multihilo a pesar de que corre en un solo proceso.
 
 Javascript se organiza usando las siguientes estructuras de datos:
@@ -136,7 +136,7 @@ Un ejemplo para poder ver la aplicabilidad del patrón decorador podría ser el 
 + El decorador redirige las peticiones al componente asociado.
 + Opcionalmente puede realizar tareas adicionales antes y después de redirigir la petición.
 
-*Consecuencias
+## Consecuencias
 + Más flexible que la herencia. Al utilizar este patrón, se pueden añadir y eliminar responsabilidades en tiempo de ejecución. Además, evita la utilización de la herencia con muchas clases y también, en algunos casos, la herencia múltiple.
 + Evita la aparición de clases con muchas responsabilidades en las clases superiores de la jerarquía. Este patrón nos permite ir incorporando de manera incremental responsabilidades.
 + Genera gran cantidad de objetos pequeños. El uso de decoradores da como resultado sistemas formados por muchos objetos pequeños y parecidos.
