@@ -99,7 +99,7 @@ Añade nuevas responsabilidades a un objeto de forma dinámica permitiendo así 
 
 El patrón Decorator responde a la necesidad de añadir dinámicamente funcionalidad a un Objeto. Esto nos permite no tener que crear sucesivas clases que hereden de la primera incorporando la nueva funcionalidad, sino otras que la implementan y se asocian a la primera.
 
-- Motivación
+* Motivación
 Un ejemplo para poder ver la aplicabilidad del patrón decorador podría ser el siguiente:
 
 + Disponemos de una herramienta para crear interfaces gráﬁcas,  que permite añadir funcionalidades como bordes o barras de desplazamiento a cualquier componente de la interfaz.
@@ -116,14 +116,14 @@ Un ejemplo para poder ver la aplicabilidad del patrón decorador podría ser el 
 
 + También se puede ver que el cliente no necesita hacer distinción entre los componentes visuales decorados y los sin decorar.
 
-- Aplicabilidad
+* Aplicabilidad
 + Añadir responsabilidades a objetos individuales de forma dinámica y transparente
 + Responsabilidades de un objeto pueden ser retiradas
 + Cuando la extensión mediante la herencia no es viable
 + Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones para extenderlo a través de la herencia.
 + Existe la necesidad de extender dinámicamente la funcionalidad de un objeto y quizás quitar la funcionalidad extendida.
 
-- Estructura
+* Estructura
 + Componente: Deﬁne la interfaz para los objetos que pueden tener responsabilidades añadidas.
 
 + Componente Concreto: Deﬁne un objeto al cual se le pueden agregar responsabilidades adicionales.
@@ -132,17 +132,17 @@ Un ejemplo para poder ver la aplicabilidad del patrón decorador podría ser el 
 
 + Decorador Concreto: Añade responsabilidades al componente.
 
-- Colaboraciones
+* Colaboraciones
 + El decorador redirige las peticiones al componente asociado.
 + Opcionalmente puede realizar tareas adicionales antes y después de redirigir la petición.
 
-- Consecuencias
+* Consecuencias
 + Más flexible que la herencia. Al utilizar este patrón, se pueden añadir y eliminar responsabilidades en tiempo de ejecución. Además, evita la utilización de la herencia con muchas clases y también, en algunos casos, la herencia múltiple.
 + Evita la aparición de clases con muchas responsabilidades en las clases superiores de la jerarquía. Este patrón nos permite ir incorporando de manera incremental responsabilidades.
 + Genera gran cantidad de objetos pequeños. El uso de decoradores da como resultado sistemas formados por muchos objetos pequeños y parecidos.
 + Puede haber problemas con la identidad de los objetos. Un decorador se comporta como un envoltorio transparente. Pero desde el punto de vista de la identidad de objetos, estos no son idénticos, por lo tanto no deberíamos apoyarnos en la identidad cuando estamos usando decoradores.
 
-- Implementación
+* Implementación
 El patrón Decorator soluciona este problema de una manera mucho más sencilla y extensible.
 
 Se crea a partir de Ventana la subclase abstracta VentanaDecorator y, heredando de ella, BordeDecorator y BotonDeAyudaDecorator. VentanaDecorator encapsula el comportamiento de Ventana y utiliza composición recursiva para que sea posible añadir tantas “capas” de Decorators como se desee. Podemos crear tantos Decorators como queramos heredando de VentanaDecorator.
